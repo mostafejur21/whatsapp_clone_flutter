@@ -6,7 +6,6 @@ import 'package:whatsapp_ui/router.dart';
 import 'package:whatsapp_ui/screens/mobile_layout_screen.dart';
 import 'package:whatsapp_ui/screens/web_layout_screen.dart';
 import 'package:whatsapp_ui/utils/responsive_layout.dart';
-
 import 'firebase_options.dart';
 
 void main() async {
