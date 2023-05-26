@@ -62,6 +62,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "cross_file",
+      "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/cross_file-0.3.3+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
@@ -140,6 +146,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.15",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
       "name": "flutter_riverpod",
       "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/flutter_riverpod-2.3.6",
       "packageUri": "lib/",
@@ -166,6 +178,36 @@
     {
       "name": "http_parser",
       "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "image_picker",
+      "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/image_picker-0.8.7+5",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "image_picker_android",
+      "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/image_picker_android-0.8.6+16",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "image_picker_for_web",
+      "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/image_picker_for_web-2.1.12",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "image_picker_ios",
+      "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.7+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "image_picker_platform_interface",
+      "rootUri": "file:///home/mostafejur/.pub-cache/hosted/pub.dev/image_picker_platform_interface-2.6.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -284,7 +326,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-05-24T20:21:03.193074Z",
+  "generated": "2023-05-26T18:33:48.618345Z",
   "generator": "pub",
   "generatorVersion": "3.0.1"
 }

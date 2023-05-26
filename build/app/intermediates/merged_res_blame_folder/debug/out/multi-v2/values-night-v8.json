@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.whatsapp_ui.app-mergeDebugResources-14:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.whatsapp_ui.app-mergeDebugResources-25:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "/home/mostafejur/FlutterProjects/whatsapp_clone-main/android/app/src/main/res/values-night/styles.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.whatsapp_ui.app-mergeDebugResources-14:/values-uk/values-uk.xml",
+            "outputFile": "com.example.whatsapp_ui.app-mergeDebugResources-25:/values-uk/values-uk.xml",
             "map": [
                 {
                     "source": "/home/mostafejur/.gradle/caches/transforms-3/15eddd45100fa512963e6542464ed3b9/transformed/browser-1.4.0/res/values-uk/values-uk.xml",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/home/mostafejur/.gradle/caches/transforms-3/9df09c476a8966dff0ab2c589910f62f/transformed/core-1.6.0/res/values-uk/values-uk.xml",
+                    "source": "/home/mostafejur/.gradle/caches/transforms-3/742b554cf5c7cb7bdcfd264696b34620/transformed/core-1.9.0/res/values-uk/values-uk.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
