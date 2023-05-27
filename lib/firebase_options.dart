@@ -69,6 +69,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '767127960317',
     projectId: 'whatsapp-backend-15494',
     storageBucket: 'whatsapp-backend-15494.appspot.com',
+    androidClientId: '767127960317-0m0shguuk7dvog5ng4ania80pkhblqbi.apps.googleusercontent.com',
     iosClientId: '767127960317-2ks4ndhd0d1kp62oavndb9gf29aauekv.apps.googleusercontent.com',
     iosBundleId: 'com.example.whatsappUi',
   );
