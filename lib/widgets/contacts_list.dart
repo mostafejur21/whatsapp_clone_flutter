@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:whatsapp_ui/colors.dart';
-import 'package:whatsapp_ui/info.dart';
 import 'package:whatsapp_ui/model/chat_contact.dart';
 import 'package:whatsapp_ui/screens/mobile_chat_screen.dart';
 

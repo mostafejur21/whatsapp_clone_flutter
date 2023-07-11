@@ -4,7 +4,6 @@ import 'package:intl/intl.dart';
 import 'package:whatsapp_ui/colors.dart';
 import 'package:whatsapp_ui/common/widgets/loader.dart';
 import 'package:whatsapp_ui/features/chat/controller/chat_controller.dart';
-import 'package:whatsapp_ui/info.dart';
 import 'package:whatsapp_ui/features/chat/screens/mobile_chat_screen.dart';
 import 'package:whatsapp_ui/model/chat_contact.dart';
 
