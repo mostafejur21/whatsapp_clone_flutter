@@ -1,7 +1,7 @@
 {
   "file_generated_by": "FlutterFire CLI",
   "purpose": "FirebaseAppID & ProjectID for this Firebase app in this directory",
-  "GOOGLE_APP_ID": "1:767127960317:ios:aace78cde79c8bc50f1c94",
-  "FIREBASE_PROJECT_ID": "whatsapp-backend-15494",
-  "GCM_SENDER_ID": "767127960317"
+  "GOOGLE_APP_ID": "1:134050050670:ios:ae7d1477c9ee46f0f82c7f",
+  "FIREBASE_PROJECT_ID": "new-whatsapp-jabid",
+  "GCM_SENDER_ID": "134050050670"
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">767127960317-jfgqunl49g445e6vq54t00mhljrmrptk.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">767127960317</string>
-    <string name="google_api_key" translatable="false">AIzaSyBj22rHP-uZU0q8ghiH68DAbq1N-G54hyU</string>
-    <string name="google_app_id" translatable="false">1:767127960317:android:abcb6295ac4265110f1c94</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBj22rHP-uZU0q8ghiH68DAbq1N-G54hyU</string>
-    <string name="google_storage_bucket" translatable="false">whatsapp-backend-15494.appspot.com</string>
-    <string name="project_id" translatable="false">whatsapp-backend-15494</string>
+    <string name="default_web_client_id" translatable="false">134050050670-ej2im59n92vvi1u2ttmdbk7ra0h6qpnf.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">134050050670</string>
+    <string name="google_api_key" translatable="false">AIzaSyCcoiKvSJ-0mk5JX_IgWNR0hNDk0s2WLNg</string>
+    <string name="google_app_id" translatable="false">1:134050050670:android:71ca94942fe521b5f82c7f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCcoiKvSJ-0mk5JX_IgWNR0hNDk0s2WLNg</string>
+    <string name="google_storage_bucket" translatable="false">new-whatsapp-jabid.appspot.com</string>
+    <string name="project_id" translatable="false">new-whatsapp-jabid</string>
 </resources>

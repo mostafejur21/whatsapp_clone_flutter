@@ -6,10 +6,8 @@ import 'package:whatsapp_ui/common/widgets/error.dart';
 import 'package:whatsapp_ui/common/widgets/loader.dart';
 import 'package:whatsapp_ui/features/auth/controller/auth_controller.dart';
 import 'package:whatsapp_ui/features/landingPage/screen/landing_page.dart';
-import 'package:whatsapp_ui/route.dart';
+import 'package:whatsapp_ui/router.dart';
 import 'package:whatsapp_ui/screens/mobile_layout_screen.dart';
-import 'package:whatsapp_ui/screens/web_layout_screen.dart';
-import 'package:whatsapp_ui/utils/responsive_layout.dart';
 import 'firebase_options.dart';
 
 void main() async {

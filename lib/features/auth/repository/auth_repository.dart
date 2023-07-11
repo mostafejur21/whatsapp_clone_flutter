@@ -1,39 +1,46 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:whatsapp_ui/common/repository/common_firebase_storage_repo.dart';
-import 'package:whatsapp_ui/common/utlis/utlis.dart';
+import 'package:whatsapp_ui/common/utils/utils.dart';
 import 'package:whatsapp_ui/features/auth/screens/otp_screens.dart';
-import 'package:whatsapp_ui/features/auth/screens/user_info_screen.dart';
-import 'package:whatsapp_ui/models/user_model.dart';
+import 'package:whatsapp_ui/features/auth/screens/user_information_screen.dart';
+import 'package:whatsapp_ui/model/user_model.dart';
 import 'package:whatsapp_ui/screens/mobile_layout_screen.dart';
+
+import '../../../common/repositories/common_firebase_storage_repository.dart';
 
 final authRepositoryProvider = Provider(
   (ref) => AuthRepository(
-      auth: FirebaseAuth.instance, firestore: FirebaseFirestore.instance),
+    auth: FirebaseAuth.instance,
+    firestore: FirebaseFirestore.instance,
+  ),
 );
 
 class AuthRepository {
   final FirebaseAuth auth;
   final FirebaseFirestore firestore;
+
   AuthRepository({
     required this.auth,
     required this.firestore,
   });
 
-  Future<UserModel?> getCurrentUserData () async {
-    var userData = await firestore.collection('user').doc(auth.currentUser?.uid).get();
+  Future<UserModel?> getCurrentUserData() async {
+    var userData =
+        await firestore.collection('users').doc(auth.currentUser?.uid).get();
+    UserModel? user;
 
-    UserModel ? user;
-    if(userData.data() != null){
+    if (userData.data() != null) {
       user = UserModel.fromMap(userData.data()!);
     }
     return user;
   }
+
   void signInWithPhone(BuildContext context, String phoneNumber) async {
     try {
       await auth.verifyPhoneNumber(
@@ -41,19 +48,17 @@ class AuthRepository {
         verificationCompleted: (PhoneAuthCredential credential) async {
           await auth.signInWithCredential(credential);
         },
-        verificationFailed: (FirebaseAuthException e) {
-          showSnackBar(context: context, content: e.message!);
+        verificationFailed: (e) {
+          throw Exception(e.message);
         },
-        codeSent: (String verificationId, int? resendToken) async {
-          Navigator.pushNamed(context, OTPScreen.routeName,
-              arguments: verificationId);
-          // final String smsCode = '123456';
-          // final PhoneAuthCredential credential = PhoneAuthProvider.credential(
-          //   verificationId: verificationId,
-          //   smsCode: smsCode,
-          // );
-          // await auth.signInWithCredential(credential);
-        },
+        codeSent: ((String verificationId, int? resendToken) async {
+          Navigator.pushNamed(
+            // Navigator
+            context,
+            OTPScreen.routeName,
+            arguments: verificationId,
+          );
+        }),
         codeAutoRetrievalTimeout: (String verificationId) {},
       );
     } on FirebaseAuthException catch (e) {
@@ -61,20 +66,18 @@ class AuthRepository {
     }
   }
 
-  void verifyOPT({
+  void verifyOTP({
     required BuildContext context,
     required String verificationId,
-    required String userOPT,
+    required String userOTP,
   }) async {
     try {
       PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: verificationId,
-        smsCode: userOPT,
-      );
+          verificationId: verificationId, smsCode: userOTP);
       await auth.signInWithCredential(credential);
       Navigator.pushNamedAndRemoveUntil(
         context,
-        UserInfoScreen.routeName,
+        UserInformationScreen.routeName,
         (route) => false,
       );
     } on FirebaseAuthException catch (e) {
@@ -91,21 +94,26 @@ class AuthRepository {
     try {
       String uid = auth.currentUser!.uid;
       String photoUrl =
-          "https://cdn-icons-png.flaticon.com/512/527/527489.png?w=1060&t=st=1685129936~exp=1685130536~hmac=3fa58f255223139b824223118efc5bd4d042615001e628dba0253bb6566c8b32";
+          'https://png.pngitem.com/pimgs/s/649-6490124_katie-notopoulos-katienotopoulos-i-write-about-tech-round.png';
       if (profilePic != null) {
         photoUrl = await ref
-            .read(CommonFirebaseStorageRepoProvider)
-            .storeFileToFirebase('profilPic/$uid', profilePic);
+            .read(commonFirebaseStorageRepositoryProvider)
+            .storeFileToFirebase(
+              'profilePic/$uid',
+              profilePic,
+            );
       }
-      var users = UserModel(
+
+      var user = UserModel(
         name: name,
         uid: uid,
         profilePic: photoUrl,
         isOnline: true,
-        phoneNumber: auth.currentUser!.uid,
+        phoneNumber: auth.currentUser!.phoneNumber!,
         groupId: [],
       );
-      await firestore.collection('users').doc(uid).set(users.toMap());
+
+      await firestore.collection('users').doc(uid).set(user.toMap());
       Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
@@ -117,4 +125,21 @@ class AuthRepository {
       showSnackBar(context: context, content: e.toString());
     }
   }
+
+  Stream<UserModel> userData(String userId) {
+    return firestore.collection('users').doc(userId).snapshots().map(
+          (event) => UserModel.fromMap(
+            event.data()!,
+          ),
+        );
+  }
+
+  void setUserState(bool isOnline) async {
+    await firestore.collection('users').doc(auth.currentUser!.uid).update({
+      'isOnline': isOnline,
+    });
+  }
 }
+
+
+// Navigator

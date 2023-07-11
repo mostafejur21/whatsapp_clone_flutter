@@ -47,30 +47,29 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBQZm2EpInYmxvtyd2cpqyX1G8cSEvosqg',
-    appId: '1:767127960317:web:99bde64aa00f748b0f1c94',
-    messagingSenderId: '767127960317',
-    projectId: 'whatsapp-backend-15494',
-    authDomain: 'whatsapp-backend-15494.firebaseapp.com',
-    storageBucket: 'whatsapp-backend-15494.appspot.com',
+    apiKey: 'AIzaSyAdQ2A7idB_mzN6cfqmVRaW4nLgAA7SmKc',
+    appId: '1:134050050670:web:692b15ab7cd4e324f82c7f',
+    messagingSenderId: '134050050670',
+    projectId: 'new-whatsapp-jabid',
+    authDomain: 'new-whatsapp-jabid.firebaseapp.com',
+    storageBucket: 'new-whatsapp-jabid.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBj22rHP-uZU0q8ghiH68DAbq1N-G54hyU',
-    appId: '1:767127960317:android:abcb6295ac4265110f1c94',
-    messagingSenderId: '767127960317',
-    projectId: 'whatsapp-backend-15494',
-    storageBucket: 'whatsapp-backend-15494.appspot.com',
+    apiKey: 'AIzaSyCcoiKvSJ-0mk5JX_IgWNR0hNDk0s2WLNg',
+    appId: '1:134050050670:android:71ca94942fe521b5f82c7f',
+    messagingSenderId: '134050050670',
+    projectId: 'new-whatsapp-jabid',
+    storageBucket: 'new-whatsapp-jabid.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCLK14U6qi8JA7rhcalTAbBh3DJKPXACvE',
-    appId: '1:767127960317:ios:aace78cde79c8bc50f1c94',
-    messagingSenderId: '767127960317',
-    projectId: 'whatsapp-backend-15494',
-    storageBucket: 'whatsapp-backend-15494.appspot.com',
-    androidClientId: '767127960317-0m0shguuk7dvog5ng4ania80pkhblqbi.apps.googleusercontent.com',
-    iosClientId: '767127960317-2ks4ndhd0d1kp62oavndb9gf29aauekv.apps.googleusercontent.com',
+    apiKey: 'AIzaSyADanog2kH3AKIjfJTUSGYNdLuDPpQFn_Y',
+    appId: '1:134050050670:ios:ae7d1477c9ee46f0f82c7f',
+    messagingSenderId: '134050050670',
+    projectId: 'new-whatsapp-jabid',
+    storageBucket: 'new-whatsapp-jabid.appspot.com',
+    iosClientId: '134050050670-aoj0bp13mo2jkv9te5auamoi350886vm.apps.googleusercontent.com',
     iosBundleId: 'com.example.whatsappUi',
   );
 }

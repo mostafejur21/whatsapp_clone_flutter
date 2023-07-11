@@ -1,49 +1,34 @@
 {
   "project_info": {
-    "project_number": "767127960317",
-    "project_id": "whatsapp-backend-15494",
-    "storage_bucket": "whatsapp-backend-15494.appspot.com"
+    "project_number": "134050050670",
+    "project_id": "new-whatsapp-jabid",
+    "storage_bucket": "new-whatsapp-jabid.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:767127960317:android:abcb6295ac4265110f1c94",
+        "mobilesdk_app_id": "1:134050050670:android:71ca94942fe521b5f82c7f",
         "android_client_info": {
           "package_name": "com.example.whatsapp_ui"
         }
       },
       "oauth_client": [
         {
-          "client_id": "767127960317-0m0shguuk7dvog5ng4ania80pkhblqbi.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.whatsapp_ui",
-            "certificate_hash": "4bb5abd5e2fa28fe3284103b1b6d9c45127e9069"
-          }
-        },
-        {
-          "client_id": "767127960317-jfgqunl49g445e6vq54t00mhljrmrptk.apps.googleusercontent.com",
+          "client_id": "134050050670-ej2im59n92vvi1u2ttmdbk7ra0h6qpnf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBj22rHP-uZU0q8ghiH68DAbq1N-G54hyU"
+          "current_key": "AIzaSyCcoiKvSJ-0mk5JX_IgWNR0hNDk0s2WLNg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "767127960317-jfgqunl49g445e6vq54t00mhljrmrptk.apps.googleusercontent.com",
+              "client_id": "134050050670-ej2im59n92vvi1u2ttmdbk7ra0h6qpnf.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "767127960317-2ks4ndhd0d1kp62oavndb9gf29aauekv.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.whatsappUi"
-              }
             }
           ]
         }

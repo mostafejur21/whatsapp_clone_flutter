@@ -1,7 +1,7 @@
-#Sun May 28 00:14:42 BDT 2023
-base.0=/home/mostafejur/FlutterProjects/whatsapp_clone-main/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-base.1=/home/mostafejur/FlutterProjects/whatsapp_clone-main/build/app/intermediates/dex/debug/mergeDexDebug/classes2.dex
-base.2=/home/mostafejur/FlutterProjects/whatsapp_clone-main/build/app/intermediates/dex/debug/mergeDexDebug/classes3.dex
+#Wed Jul 12 02:17:56 BDT 2023
+base.0=D\:\\Programming\\Flutter Projects\\whatsapp_clone_flutter\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+base.1=D\:\\Programming\\Flutter Projects\\whatsapp_clone_flutter\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
+base.2=D\:\\Programming\\Flutter Projects\\whatsapp_clone_flutter\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=classes2.dex
 path.2=classes3.dex

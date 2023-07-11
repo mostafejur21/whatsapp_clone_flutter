@@ -1,34 +1,28 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'package:whatsapp_ui/common/utlis/utlis.dart';
 import 'package:whatsapp_ui/features/auth/repository/auth_repository.dart';
-import 'package:whatsapp_ui/models/user_model.dart';
+import 'package:whatsapp_ui/model/user_model.dart';
 
-final authControllerProvider = Provider(
-  (ref) {
-    final authRepository = ref.watch(authRepositoryProvider);
-    return AuthController(authRepository: authRepository, ref: ref);
-  },
-);
+final authControllerProvider = Provider((ref) {
+  final authRepository = ref.watch(authRepositoryProvider);
+  return AuthController(authRepository: authRepository, ref: ref);
+});
 
-final userDataAuthProvider = FutureProvider(
-  (ref) {
-    final authController = ref.watch(authControllerProvider);
-    return authController.getUserData();
-  },
-);
+final userDataAuthProvider = FutureProvider((ref) {
+  final authController = ref.watch(authControllerProvider);
+  return authController.getUserData();
+});
 
 class AuthController {
-  final ProviderRef ref;
   final AuthRepository authRepository;
+  final ProviderRef ref;
   AuthController({
-    required this.ref,
     required this.authRepository,
+    required this.ref,
   });
+
   Future<UserModel?> getUserData() async {
     UserModel? user = await authRepository.getCurrentUserData();
     return user;
@@ -38,11 +32,11 @@ class AuthController {
     authRepository.signInWithPhone(context, phoneNumber);
   }
 
-  void verifyOPT(BuildContext context, String verificationId, String userOPT) {
-    authRepository.verifyOPT(
+  void verifyOTP(BuildContext context, String verificationId, String userOTP) {
+    authRepository.verifyOTP(
       context: context,
       verificationId: verificationId,
-      userOPT: userOPT,
+      userOTP: userOTP,
     );
   }
 
@@ -54,5 +48,13 @@ class AuthController {
       ref: ref,
       context: context,
     );
+  }
+
+  Stream<UserModel> userDataById(String userId) {
+    return authRepository.userData(userId);
+  }
+
+  void setUserState(bool isOnline) {
+    authRepository.setUserState(isOnline);
   }
 }
