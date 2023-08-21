@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:whatsapp_ui/common/utils/utils.dart';
@@ -66,7 +67,7 @@ class _UserInformationScreenState extends ConsumerState<UserInformationScreen> {
                     left: 80,
                     child: IconButton(
                       onPressed: SelectImage,
-                      icon: Icon(Icons.add_a_photo),
+                      icon: const Icon(Icons.add_a_photo),
                     ),
                   ),
                 ],
@@ -95,6 +96,5 @@ class _UserInformationScreenState extends ConsumerState<UserInformationScreen> {
     );
   }
 }
-
 
 // Navigator

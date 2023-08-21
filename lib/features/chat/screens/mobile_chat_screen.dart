@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:whatsapp_ui/colors.dart';
-import 'package:whatsapp_ui/common/widgets/loader.dart';
 import 'package:whatsapp_ui/features/auth/controller/auth_controller.dart';
 import 'package:whatsapp_ui/features/chat/widgets/bottom_chat_field.dart';
-import 'package:whatsapp_ui/model/user_model.dart';
 import 'package:whatsapp_ui/features/chat/widgets/chat_list.dart';
+import 'package:whatsapp_ui/model/user_model.dart';
 
 class MobileChatScreen extends ConsumerWidget {
   static const String routeName = '/mobile-chat-screen';
@@ -27,7 +25,7 @@ class MobileChatScreen extends ConsumerWidget {
           stream: ref.read(authControllerProvider).userDataById(uid),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Loader();
+              return const CircularProgressIndicator();
             }
             return Column(
               children: [
@@ -46,15 +44,33 @@ class MobileChatScreen extends ConsumerWidget {
         centerTitle: false,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Coming Soon'),
+                ),
+              );
+            },
             icon: const Icon(Icons.video_call),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Coming Soon'),
+                ),
+              );
+            },
             icon: const Icon(Icons.call),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Coming Soon'),
+                ),
+              );
+            },
             icon: const Icon(Icons.more_vert),
           ),
         ],

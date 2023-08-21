@@ -52,7 +52,7 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
           backgroundColor: appBarColor,
           centerTitle: false,
           title: const Text(
-            'Messenger',
+            'WhatsApp',
             style: TextStyle(
               fontSize: 20,
               color: Colors.grey,
@@ -62,11 +62,17 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
           actions: [
             IconButton(
               icon: const Icon(Icons.search, color: Colors.grey),
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(const SnackBar(content: Text("Coming Soon")));
+              },
             ),
             IconButton(
               icon: const Icon(Icons.more_vert, color: Colors.grey),
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(const SnackBar(content: Text("Coming Soon")));
+              },
             ),
           ],
           bottom: const TabBar(
@@ -87,6 +93,9 @@ class _MobileLayoutScreenState extends ConsumerState<MobileLayoutScreen>
               // Tab(
               //   text: 'CALLS',
               // ),
+              // Tab(
+              //   text: 'PEOPLE',
+              // )
             ],
           ),
         ),

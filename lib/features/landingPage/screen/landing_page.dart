@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/colors.dart';
 import 'package:whatsapp_ui/common/widgets/custom_button.dart';
+
 import '../../auth/screens/login_screen.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
-  void navigateToLoginScreen(BuildContext context){
+  void navigateToLoginScreen(BuildContext context) {
     Navigator.pushNamed(context, LoginScreen.routeName);
   }
 
@@ -41,9 +42,12 @@ class LandingPage extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               SizedBox(
-                  width: size.width * 0.75,
-                  child:
-                      CustomButton(text: "Agree and Continue", onPressed: () => navigateToLoginScreen(context))),
+                width: size.width * 0.75,
+                child: CustomButton(
+                  text: "Agree and Continue",
+                  onPressed: () => navigateToLoginScreen(context),
+                ),
+              ),
             ],
           ),
         ),

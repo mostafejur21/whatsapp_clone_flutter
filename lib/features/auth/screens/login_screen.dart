@@ -41,7 +41,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           .read(authControllerProvider)
           .signInWithPhone(context, "+${country!.phoneCode}$phoneNumber");
     } else {
-      showSnackBar(context: context, content: 'Fill out all the fields');
+      showSnackBar(
+          context: context, content: 'Enter your correct phone number');
     }
   }
 
@@ -52,7 +53,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Enter your phone number'),
-        elevation: 0,
+        elevation: 5,
         backgroundColor: backgroundColor,
       ),
       body: SingleChildScrollView(
@@ -77,6 +78,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   SizedBox(
                     width: size.width * 0.7,
                     child: TextField(
+                      keyboardType: TextInputType.number,
                       controller: phoneController,
                       decoration: const InputDecoration(
                         hintText: 'phone number',
@@ -102,6 +104,5 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     );
   }
 }
-
 
 // Navigator
